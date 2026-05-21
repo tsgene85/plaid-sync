@@ -90,7 +90,7 @@
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(metadata)
+          body: JSON.stringify({ public_token: public_token, metadata: metadata })
         });
         // console.log('public_token: ' + public_token + ', metadata: ' + JSON.stringify(metadata));
       },

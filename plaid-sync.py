@@ -1,4 +1,4 @@
-#!.env/bin/python
+#!/usr/bin/env python3
 
 import argparse
 import datetime
@@ -176,7 +176,7 @@ class PlaidSynchronizer:
                 cursor=last_cursor,
                 status_callback=(
                     lambda added, modified, removed, has_next: print(
-                        f"        {len(added)} added, {len(modified)} modified, {len(removed)} removed (more: {has_next})"
+                        f"        {added} added, {modified} modified, {removed} removed (more: {has_next})"
                     )
                 )
                 if verbose

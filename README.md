@@ -38,16 +38,38 @@ sync mortgage or brokerage transactions. It does work fine with all of the credi
 
 ## Installation
 
-Developed for Python 3.7.4.
-
-The main dependency is the Plaid API (`plaid-python>=30.0.0`). This version is required for personal finance categories and other modern Plaid features.
+Requires Python 3.9+ (see `pyproject.toml`). The main dependency is the Plaid API (`plaid-python>=30.0.0`). This version is required for personal finance categories and other modern Plaid features.
 
 There is one optional dependency, [`tqdm`](https://github.com/tqdm/tqdm), if you want fancy progress bars during syncing. If you don't install it, you just get unfancy print
 messages. My current account load takes about 4 seconds to sync.
 
 This is not set up to be run/installed as a command line program, but could be easily done so.
 
-My standard approach is to clone the repository, set up a virtual environment, and install the necessary dependencies in that environment.
+### uv (recommended)
+
+Install [uv](https://docs.astral.sh/uv/), then from the repository root:
+
+```
+uv sync
+uv sync --extra progress   # optional: tqdm progress bars
+```
+
+This creates `.venv` and installs locked dependencies from `uv.lock`. Run commands with:
+
+```
+uv run python plaid-sync.py -c config/sandbox
+```
+
+### pip / venv
+
+Clone the repository, create a virtual environment, and install dependencies:
+
+```
+python -m venv .venv
+.venv\Scripts\activate    # Windows
+pip install -r requirements.txt
+pip install tqdm          # optional
+```
 
 ## Configuration
 
