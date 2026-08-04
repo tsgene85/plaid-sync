@@ -4,6 +4,24 @@
 **Workspace:** Local clone at `c:\LCode\plaid-sync`  
 **Stated upstream:** [https://github.com/mbafford/plaid-sync](https://github.com/mbafford/plaid-sync) (`origin` remote matches)
 
+## Table of Contents
+
+- [Executive summary](#executive-summary)
+- [What this project is](#what-this-project-is)
+- [Capability review](#capability-review)
+  - [Core workflows](#core-workflows)
+  - [Data stored locally](#data-stored-locally)
+  - [Network exposure](#network-exposure)
+- [Security findings](#security-findings)
+  - [Positive indicators](#positive-indicators)
+  - [Risks and limitations (expected for this class of tool)](#risks-and-limitations-expected-for-this-class-of-tool)
+  - [Code hygiene (not malicious, but worth knowing)](#code-hygiene-not-malicious-but-worth-knowing)
+- [Malware / backdoor assessment](#malware--backdoor-assessment)
+- [Is it safe to use?](#is-it-safe-to-use)
+- [Recommended setup checklist](#recommended-setup-checklist)
+- [File map (reviewed)](#file-map-reviewed)
+- [References](#references)
+
 ---
 
 ## Executive summary

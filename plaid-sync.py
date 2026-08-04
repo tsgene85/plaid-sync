@@ -76,6 +76,16 @@ def parse_options():
         dest="link_account",
         help="Run with this option to set up an entirely new account through Plaid.",
     )
+    parser.add_argument(
+        "-tj",
+        "--transform-json",
+        dest="transform_json",
+        action="store_true",
+        help=(
+            "Flatten each transaction's plaid_json into standalone columns "
+            "while syncing (same columns as plaid-transform.py)."
+        ),
+    )
     args = parser.parse_args()
 
     if args.date_range_sync:
@@ -496,7 +506,9 @@ def link_account(cfg: config.Config, plaid: plaidapi.PlaidAPI, account_name: str
 def main():
     args = parse_options()
     cfg = config.Config(args.config_file)
-    db = transactionsdb.TransactionsDB(cfg.get_dbfile())
+    db = transactionsdb.TransactionsDB(
+        cfg.get_dbfile(), transform_json=args.transform_json
+    )
     plaid = plaidapi.PlaidAPI(**cfg.get_plaid_client_config())
 
     if args.update_account:

@@ -2,6 +2,23 @@
 
 `plaid-sync` is a Python based command-line interface to the [Plaid API](https://plaid.com/docs/api/) that synchronizes your bank/credit card transactions to a local SQLite database.
 
+## Table of Contents
+
+- [Overview](#overview)
+  - [Use-Cases](#use-cases)
+  - [Plaid](#plaid)
+  - [Plaid Link](#plaid-link)
+  - [Limitations](#limitations)
+- [Usage](#usage)
+  - [Installation](#installation)
+    - [uv (recommended)](#uv-recommended)
+    - [pip / venv](#pip--venv)
+  - [Configuration](#configuration)
+  - [Linking a Real Account (Production)](#linking-a-real-account-production)
+  - [Updating an Expired Account](#updating-an-expired-account)
+- [WARNINGS](#warnings)
+- [TODO](#todo)
+
 ## Use-Cases
 
 The data can be easily queried using SQLite JSON query syntax, so this could be used as part of a standard personal finance workflow. Determine how often you eat out, how
@@ -153,6 +170,80 @@ $ ./show_recent.sh sandbox.db
 2025-09-21T14:34:26Z|United Airlines|-500.0
 2025-09-21T14:34:26Z|McDonald's|12.0
 ```
+
+## Linking a Real Account (Production)
+
+Sandbox only creates fake test Items. To sync a real bank or credit card, you must use Plaid's **Production** environment. See the [Plaid docs overview](https://plaid.com/docs/), [API environments](https://plaid.com/docs/api/#api-host), [Link](https://plaid.com/docs/link/), and [Sandbox vs Production](https://plaid.com/docs/sandbox/).
+
+Plaid has two environments with separate API hosts and secrets:
+
+| Environment | API host | Purpose |
+|-------------|----------|---------|
+| Sandbox | `https://sandbox.plaid.com` | Fake institutions and test credentials |
+| Production | `https://production.plaid.com` | Real institutions and live account data |
+
+**Items and access tokens cannot move between environments.** A Sandbox-linked account cannot be reused in Production; you must complete Link again with Production credentials.
+
+### 1. Get Production access and keys
+
+1. Sign up / log in at the [Plaid Dashboard](https://dashboard.plaid.com/).
+2. Open [API Keys](https://dashboard.plaid.com/developers/keys). You get one `client_id` and a **separate `secret` per environment**. Copy the **Production** secret (not Sandbox).
+3. Request Production (or Trial) access from the Dashboard ([Production access](https://dashboard.plaid.com/overview/production)). New teams may be able to test live data on a [Trial plan](https://plaid.com/docs/sandbox/#testing-with-live-data-using-a-trial-plan) before full billing approval.
+4. In [Link customization](https://dashboard.plaid.com/link), complete any required use-case / Data Transparency settings. Accounts created after late 2024 often need this before Production Link will work with real banks.
+5. For many US banks that use OAuth (Chase, Bank of America, Wells Fargo, etc.), complete [OAuth institution registration](https://plaid.com/docs/link/oauth/) in the Dashboard. On a Trial plan this may be deferred until you move to a paid plan; without registration, some major institutions will not appear or will fail to link.
+
+### 2. Create a Production config
+
+Use a **separate** config file and database from Sandbox so you never mix tokens or environments:
+
+```
+[PLAID]
+client_id = YOUR_CLIENT_ID
+secret = YOUR_PRODUCTION_SECRET
+environment = production
+
+[plaid-sync]
+dbfile = ./production.db
+```
+
+Notes:
+
+- `environment` must be `production` (this project maps that to `https://production.plaid.com`).
+- Do not put a Sandbox `secret` in a Production config (or the reverse).
+- Keep this file private; the Production `secret` and later `access_token` values grant access to real financial data.
+
+### 3. Link the real account with Plaid Link
+
+In Production, [Link is required](https://plaid.com/docs/link/) — you cannot create Items by API alone (that Sandbox-only shortcut does not exist here).
+
+```
+$ ./plaid-sync.py -c config/production --link-account 'My Chase Checking'
+
+Open the following page in your browser to continue:
+    http://127.0.0.1:4583/link.html
+```
+
+Open the page, click the button, pick your real institution, and complete login / MFA / OAuth in the browser. On success, plaid-sync exchanges the temporary `public_token` for a permanent Production `access_token` and writes it into your config:
+
+```
+[My Chase Checking]
+access_token = access-production-XXXX
+```
+
+Then sync as usual:
+
+```
+$ ./plaid-sync.py -c config/production -v
+```
+
+Optional: flatten `plaid_json` into columns while syncing with `-tj`, or run `plaid-transform.py -d production.db` afterward.
+
+### Production caveats
+
+- **Desktop Link / OAuth:** For desktop web, Plaid typically opens the bank OAuth flow in a pop-up. Stay on the local Link page until the console confirms the token exchange. See the [OAuth guide](https://plaid.com/docs/link/oauth/) if a bank fails mid-redirect.
+- **Credentials refresh:** Real Items still expire into `ITEM_LOGIN_REQUIRED`; use `--update-account` the same way as in Sandbox (see below).
+- **Billing / limits:** Production usage may count against Trial Item limits or paid plan quotas. Do not discard Production access tokens carelessly.
+- **Scope of this tool:** plaid-sync initializes Link for the **Transactions** product only. Investment and liabilities data still require higher Plaid product access and are not fully supported here.
 
 ## Updating an Expired Account
 
