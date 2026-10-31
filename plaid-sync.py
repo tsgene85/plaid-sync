@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
+import calendar
 import datetime
 import sys
 from collections import namedtuple
@@ -60,6 +61,16 @@ def parse_options():
         help="[YYYY-MM-DD] End date for querying transactions. If ommitted, tomorrow is used.",
     )
     parser.add_argument(
+        "-sm",
+        dest="months",
+        type=int,
+        metavar="M",
+        help=(
+            "Fetch the last M months of transactions through today, "
+            "using date-range sync."
+        ),
+    )
+    parser.add_argument(
         "--date-range-sync",
         dest="date_range_sync",
         action="store_true",
@@ -83,10 +94,22 @@ def parse_options():
         action="store_true",
         help=(
             "Flatten each transaction's plaid_json into standalone columns "
-            "while syncing (same columns as plaid-transform.py)."
+            "while syncing, including rows already stored "
+            "(same columns as plaid-transform.py)."
         ),
     )
     args = parser.parse_args()
+
+    if args.months is not None:
+        if args.months < 1:
+            parser.error("-sm must be a positive number of months")
+        if args.start_date:
+            parser.error("Use either -sm or -s, not both")
+        args.date_range_sync = True
+        today = datetime.datetime.now().date()
+        args.start_date = subtract_months(today, args.months)
+        if not args.end_date:
+            args.end_date = today
 
     if args.date_range_sync:
         if not args.start_date:
@@ -105,6 +128,15 @@ def parse_options():
             sys.exit(1)
 
     return args
+
+
+def subtract_months(day: datetime.date, months: int) -> datetime.date:
+    """Return the same day-of-month, months earlier, clamped to the target month."""
+    month_index = day.month - 1 - months
+    year = day.year + month_index // 12
+    month = month_index % 12 + 1
+    last_day = calendar.monthrange(year, month)[1]
+    return datetime.date(year, month, min(day.day, last_day))
 
 
 class SyncCounts(
@@ -352,7 +384,7 @@ class PlaidSynchronizer:
             if verbose:
                 print(
                     "    Saving %d balances, %d transactions"
-                    % (len(balances), len(tids_new))
+                    % (len(balances) if balances else 0, len(tids_new))
                 )
 
             self.db.save_item_info(self.item_info)
@@ -564,6 +596,9 @@ def main():
     else:
         for account_name in cfg.get_enabled_accounts():
             process_account(account_name)
+
+    if args.transform_json:
+        db.transform_all_transactions(verbose=args.verbose)
 
     print("")
     print("")

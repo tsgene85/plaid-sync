@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import json
 import re
 import datetime
 
@@ -81,10 +82,26 @@ def parse_optional_iso8601_timestamp(ts: Optional[str]) -> datetime.datetime:
     return datetime.datetime.fromisoformat(re.sub(r"[.][0-9]+Z", "+00:00", ts))
 
 
+def plaid_error_code(ex: plaid.ApiException) -> str:
+    """Plaid error_code from the JSON body. HTTP reason is only 'Bad Request'."""
+    body = ex.body
+    if isinstance(body, bytes):
+        body = body.decode("utf-8", errors="replace")
+    if isinstance(body, str) and body:
+        try:
+            payload = json.loads(body)
+        except json.JSONDecodeError:
+            payload = None
+        if isinstance(payload, dict) and payload.get("error_code"):
+            return payload["error_code"]
+    return ex.reason or ""
+
+
 def raise_plaid(ex: plaid.ApiException):
-    if ex.reason == "NO_ACCOUNTS":
+    code = plaid_error_code(ex)
+    if code == "NO_ACCOUNTS":
         raise PlaidNoApplicableAccounts(ex)
-    elif ex.reason == "ITEM_LOGIN_REQUIRED":
+    elif code == "ITEM_LOGIN_REQUIRED":
         raise PlaidAccountUpdateNeeded(ex)
     else:
         raise PlaidUnknownError(ex)
