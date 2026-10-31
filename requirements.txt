@@ -1,1 +1,2 @@
 plaid-python>=30.0.0
+pyyaml>=6.0

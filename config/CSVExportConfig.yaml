@@ -1,0 +1,42 @@
+# Columns written by plaid-export.py, in this order.
+# Add, remove, or reorder names to change the CSV.
+# A name must already exist on the SQLite table.
+# Set enabled: false to skip a table.
+
+tables:
+  transactions:
+    enabled: true
+    file: transactions.csv
+    # Omit rows that plaid-sync has marked archived.
+    exclude_archived: true
+    order_by:
+      - date desc
+      - transaction_id asc
+    columns:
+      - date
+      - name
+      - merchant_name
+      - amount
+      - iso_currency_code
+      - pending
+      - payment_channel
+      - category
+      - pfc_primary
+      - pfc_detailed
+      - account_id
+      - transaction_id
+
+  balances:
+    enabled: false
+    file: balances.csv
+    order_by:
+      - date desc
+      - account_id asc
+    columns:
+      - date
+      - account_id
+      - account_type
+      - balance_current
+      - balance_available
+      - balance_limit
+      - currency_code

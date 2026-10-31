@@ -1,0 +1,68 @@
+date,name,merchant_name,amount,iso_currency_code,pending,payment_channel,category,pfc_primary,pfc_detailed,account_id,transaction_id
+2026-08-12,CREDIT CARD 3333 PAYMENT *//,,25.0,USD,0,other,"[""Payment"", ""Credit Card""]",LOAN_PAYMENTS,LOAN_PAYMENTS_CREDIT_CARD_PAYMENT,XPV1k1rjRXSb5ayom3bysAZk5RzLrZulyVV3W,BPKl7lk3WeSLX93g484pCDz3MW48Bxtmna1zR
+2026-08-12,Uber 063015 SF**POOL**,Uber,5.4,USD,0,online,"[""Travel"", ""Taxi""]",TRANSPORTATION,TRANSPORTATION_TAXIS_AND_RIDE_SHARES,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,lEQW8WAyoMfGZMo19r9JSEQj1JB3lDsP8N5aw
+2026-08-10,Touchstone Climbing,,78.5,USD,0,in store,"[""Recreation"", ""Gyms and Fitness Centers""]",PERSONAL_CARE,PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,31XBmBJ9xltNp5vV8b8ei5NRz495yrhQpwQ9A
+2026-08-10,United Airlines,United Airlines,-500.0,USD,0,in store,"[""Travel"", ""Airlines and Aviation Services""]",TRAVEL,TRAVEL_FLIGHTS,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,eExaZawmDNfGLNwEopo4UmMe73xm6PTJNMJW9
+2026-08-09,Starbucks,Starbucks,4.33,USD,0,in store,"[""Food and Drink"", ""Restaurants"", ""Coffee Shop""]",FOOD_AND_DRINK,FOOD_AND_DRINK_COFFEE,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,aprdjd7mGxIKbx9G5D5mcA8o1eBKMjT88QZQWy
+2026-08-09,McDonald's,McDonald's,12.0,USD,0,in store,"[""Food and Drink"", ""Restaurants"", ""Fast Food""]",FOOD_AND_DRINK,FOOD_AND_DRINK_FAST_FOOD,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,dE3dQdZm94fkL43BvPvjily9D8jdQ5ivvQJQWL
+2026-08-08,SparkFun,FUN,89.4,USD,0,in store,"[""Food and Drink"", ""Restaurants""]",GENERAL_MERCHANDISE,GENERAL_MERCHANDISE_GIFTS_AND_NOVELTIES,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,jEmZoZ786Qf9ZQKWbobJhypnjjgdPLuGnxle1
+2026-08-07,INTRST PYMNT,,-4.22,USD,0,other,"[""Transfer"", ""Credit""]",TRANSFER_IN,TRANSFER_IN_OTHER_TRANSFER_IN,XPV1k1rjRXSb5ayom3bysAZk5RzLrZulyVV3W,NKjwWwPrykSw79AdoRoktKbNqD5RRRHR4zNBD
+2026-07-28,United Airlines,United Airlines,500.0,USD,0,in store,"[""Travel"", ""Airlines and Aviation Services""]",TRAVEL,TRAVEL_FLIGHTS,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,QBGVnVZ3AbsezBwVnmewHPxG6wMn9LF4DvBrm
+2026-07-26,Uber 072515 SF**POOL**,Uber,6.33,USD,0,online,"[""Travel"", ""Taxi""]",TRANSPORTATION,TRANSPORTATION_TAXIS_AND_RIDE_SHARES,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,dE3dQdZm94fkL43BvPk3hgoxzZQe97I5R79ox
+2026-07-23,Tectra Inc,,500.0,USD,0,in store,"[""Food and Drink"", ""Restaurants""]",RENT_AND_UTILITIES,RENT_AND_UTILITIES_INTERNET_AND_CABLE,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,Z7yg3gBmAlskLljBnGkjhKzMwn7ARQtAG4Wny
+2026-07-22,KFC,KFC,500.0,USD,0,in store,"[""Food and Drink"", ""Restaurants"", ""Fast Food""]",FOOD_AND_DRINK,FOOD_AND_DRINK_FAST_FOOD,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,1ZMynyW9BXS715bxQW7bTpW4RnJGXqCLrBVbw
+2026-07-22,AUTOMATIC PAYMENT - THANK,,2078.5,USD,0,online,"[""Payment""]",LOAN_PAYMENTS,LOAN_PAYMENTS_OTHER_PAYMENT,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,LlNj8jPqwETbVxr7LjbrsNK7lBQMkVivEwBgr
+2026-07-22,Madison Bicycle Shop,,500.0,USD,0,in store,"[""Shops"", ""Sporting Goods""]",TRANSPORTATION,TRANSPORTATION_BIKES_AND_SCOOTERS,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,MqNwkwPKVWu91Ve8pG9esqp3QolRwBcw1qkbJ
+2026-07-13,CREDIT CARD 3333 PAYMENT *//,,25.0,USD,0,other,"[""Payment"", ""Credit Card""]",LOAN_PAYMENTS,LOAN_PAYMENTS_CREDIT_CARD_PAYMENT,XPV1k1rjRXSb5ayom3bysAZk5RzLrZulyVV3W,7q5QrQX9Nzuv1KpJ8yvpF7BD3Nlp9ECAxe34b
+2026-07-13,Uber 063015 SF**POOL**,Uber,5.4,USD,0,online,"[""Travel"", ""Taxi""]",TRANSPORTATION,TRANSPORTATION_TAXIS_AND_RIDE_SHARES,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,aprdjd7mGxIKbx9G5DK9INDyR4MEogilDrnpL
+2026-07-11,United Airlines,United Airlines,-500.0,USD,0,in store,"[""Travel"", ""Airlines and Aviation Services""]",TRAVEL,TRAVEL_FLIGHTS,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,4LkvlvZJdqh5m1wv8A5wUMvaVJ53moiNLBW8A
+2026-07-11,Touchstone Climbing,,78.5,USD,0,in store,"[""Recreation"", ""Gyms and Fitness Centers""]",PERSONAL_CARE,PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,pwRLGLAWmoIElow5RLEwTKVGgeMzx1tyzae94
+2026-07-10,McDonald's,McDonald's,12.0,USD,0,in store,"[""Food and Drink"", ""Restaurants"", ""Fast Food""]",FOOD_AND_DRINK,FOOD_AND_DRINK_FAST_FOOD,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,NKjwWwPrykSw79AdoRwAIyp9Vdjx7WhBQ9aLK
+2026-07-10,Starbucks,Starbucks,4.33,USD,0,in store,"[""Food and Drink"", ""Restaurants"", ""Coffee Shop""]",FOOD_AND_DRINK,FOOD_AND_DRINK_COFFEE,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,PzZeGe7BAnSbj6qRnQbqsNpeLJkwlMiBAgjEA
+2026-07-09,SparkFun,FUN,89.4,USD,0,in store,"[""Food and Drink"", ""Restaurants""]",GENERAL_MERCHANDISE,GENERAL_MERCHANDISE_GIFTS_AND_NOVELTIES,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,jEmZoZ786Qf9ZQKWbo9KswApJXrby1UzaD9oR
+2026-07-08,INTRST PYMNT,,-4.22,USD,0,other,"[""Transfer"", ""Credit""]",TRANSFER_IN,TRANSFER_IN_OTHER_TRANSFER_IN,XPV1k1rjRXSb5ayom3bysAZk5RzLrZulyVV3W,eExaZawmDNfGLNwEopGwsK5BVAgadetRmpPyB
+2026-06-28,United Airlines,United Airlines,500.0,USD,0,in store,"[""Travel"", ""Airlines and Aviation Services""]",TRAVEL,TRAVEL_FLIGHTS,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,1ZMynyW9BXS715bxQW7bTpW74VRyZrCvEoaB4
+2026-06-26,Uber 072515 SF**POOL**,Uber,6.33,USD,0,online,"[""Travel"", ""Taxi""]",TRANSPORTATION,TRANSPORTATION_TAXIS_AND_RIDE_SHARES,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,V4y1K1qNmRUyz3ErnZyEHzlAEJgyZMiANdvxk
+2026-06-23,Tectra Inc,,500.0,USD,0,in store,"[""Food and Drink"", ""Restaurants""]",RENT_AND_UTILITIES,RENT_AND_UTILITIES_INTERNET_AND_CABLE,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,LlNj8jPqwETbVxr7LjbrsNKz76lJjduzdamww
+2026-06-22,AUTOMATIC PAYMENT - THANK,,2078.5,USD,0,online,"[""Payment""]",LOAN_PAYMENTS,LOAN_PAYMENTS_OTHER_PAYMENT,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,g9aA1A7m6jSEWjXow8EXTZnkW5zJ7mtkd1GWq
+2026-06-22,KFC,KFC,500.0,USD,0,in store,"[""Food and Drink"", ""Restaurants"", ""Fast Food""]",FOOD_AND_DRINK,FOOD_AND_DRINK_FAST_FOOD,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,oEmXAXywopfGxpQNbZGQsB6n3zgAxNcwGyPEn
+2026-06-22,Madison Bicycle Shop,,500.0,USD,0,in store,"[""Shops"", ""Sporting Goods""]",TRANSPORTATION,TRANSPORTATION_BIKES_AND_SCOOTERS,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,pwRLGLAWmoIElow5RLEwTKVNGJgka5fm8nqaW
+2026-06-13,CREDIT CARD 3333 PAYMENT *//,,25.0,USD,0,other,"[""Payment"", ""Credit Card""]",LOAN_PAYMENTS,LOAN_PAYMENTS_CREDIT_CARD_PAYMENT,XPV1k1rjRXSb5ayom3bysAZk5RzLrZulyVV3W,aprdjd7mGxIKbx9G5DK9INDGyqRXwWuGV3v8X
+2026-06-13,Uber 063015 SF**POOL**,Uber,5.4,USD,0,online,"[""Travel"", ""Taxi""]",TRANSPORTATION,TRANSPORTATION_TAXIS_AND_RIDE_SHARES,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,wEXArAq81nfG8nNqQ3GNsygW9P8RrnTdKVakw
+2026-06-11,United Airlines,United Airlines,-500.0,USD,0,in store,"[""Travel"", ""Airlines and Aviation Services""]",TRAVEL,TRAVEL_FLIGHTS,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,5pMxqx59aKIRjBxGk9RxUWGyMZzplBTLjdERm
+2026-06-11,Touchstone Climbing,,78.5,USD,0,in store,"[""Recreation"", ""Gyms and Fitness Centers""]",PERSONAL_CARE,PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,8KjwzwZ9PBSwg7xDlPwxIKnDMzpmVvfEemRqL
+2026-06-10,McDonald's,McDonald's,12.0,USD,0,in store,"[""Food and Drink"", ""Restaurants"", ""Fast Food""]",FOOD_AND_DRINK,FOOD_AND_DRINK_FAST_FOOD,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,JLNaoaV7WghDa7XJMbDXtqpN6XzKb3FNwJGaG
+2026-06-10,Starbucks,Starbucks,4.33,USD,0,in store,"[""Food and Drink"", ""Restaurants"", ""Coffee Shop""]",FOOD_AND_DRINK,FOOD_AND_DRINK_COFFEE,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,kEQbgbA8oZf6jVzaen6zILEz1mgRo4fRAp3NG
+2026-06-09,SparkFun,FUN,89.4,USD,0,in store,"[""Food and Drink"", ""Restaurants""]",GENERAL_MERCHANDISE,GENERAL_MERCHANDISE_GIFTS_AND_NOVELTIES,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,lEQW8WAyoMfGZMo19rGoszMjDqe9K1iA675j1
+2026-06-08,INTRST PYMNT,,-4.22,USD,0,other,"[""Transfer"", ""Credit""]",TRANSFER_IN,TRANSFER_IN_OTHER_TRANSFER_IN,XPV1k1rjRXSb5ayom3bysAZk5RzLrZulyVV3W,4LkvlvZJdqh5m1wv8A5wUMvralVNLzTE4MKXW
+2026-05-29,United Airlines,United Airlines,500.0,USD,0,in store,"[""Travel"", ""Airlines and Aviation Services""]",TRAVEL,TRAVEL_FLIGHTS,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,EeBNZN3kWMSkXBW6j4kWhgWdkoEpAqHd3lMbl
+2026-05-27,Uber 072515 SF**POOL**,Uber,6.33,USD,0,online,"[""Travel"", ""Taxi""]",TRANSPORTATION,TRANSPORTATION_TAXIS_AND_RIDE_SHARES,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,qw1XnXA8ogIWlgkmNpWksv6ZGbQRwBiXBM59J
+2026-05-24,Tectra Inc,,500.0,USD,0,in store,"[""Food and Drink"", ""Restaurants""]",RENT_AND_UTILITIES,RENT_AND_UTILITIES_INTERNET_AND_CABLE,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,WNy8r8kPA6SkPZjpdMkjhwGan8lrj1TaqE5gj
+2026-05-23,Madison Bicycle Shop,,500.0,USD,0,in store,"[""Shops"", ""Sporting Goods""]",TRANSPORTATION,TRANSPORTATION_BIKES_AND_SCOOTERS,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,ANkQjQKBW7SKGxoBaPKoIaWzrDVGPyFe3Pkzx
+2026-05-23,KFC,KFC,500.0,USD,0,in store,"[""Food and Drink"", ""Restaurants"", ""Fast Food""]",FOOD_AND_DRINK,FOOD_AND_DRINK_FAST_FOOD,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,GZx313dN6LSKgnDAeWKDIyAj74v16rTjR3LkK
+2026-05-23,AUTOMATIC PAYMENT - THANK,,2078.5,USD,0,online,"[""Payment""]",LOAN_PAYMENTS,LOAN_PAYMENTS_OTHER_PAYMENT,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,nEQpWpA89LfGMLnpbJGns76Nb1gLvpCmgbXvV
+2026-05-14,Uber 063015 SF**POOL**,Uber,5.4,USD,0,online,"[""Travel"", ""Taxi""]",TRANSPORTATION,TRANSPORTATION_TAXIS_AND_RIDE_SHARES,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,KkNagaPlW8fp9rJK1wpJtlk3eoNJwxu3rNjeV
+2026-05-14,CREDIT CARD 3333 PAYMENT *//,,25.0,USD,0,other,"[""Payment"", ""Credit Card""]",LOAN_PAYMENTS,LOAN_PAYMENTS_CREDIT_CARD_PAYMENT,XPV1k1rjRXSb5ayom3bysAZk5RzLrZulyVV3W,NKjwWwPrykSw79AdoRwAIypN9JVAR4TNkKzEk
+2026-05-12,Touchstone Climbing,,78.5,USD,0,in store,"[""Recreation"", ""Gyms and Fitness Centers""]",PERSONAL_CARE,PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS,D7zRQRBdGZsEgoyGPAEyT1GQ8kMXyGipnVVkg,bEz373ymodfGLdwq18Gws95A7RJk6zsvrqJ8b
+2026-05-12,United Airlines,United Airlines,-500.0,USD,0,in store,"[""Travel"", ""Airlines and Aviation Services""]",TRAVEL,TRAVEL_FLIGHTS,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,rEWRbRwmo8fGW8vg7JGvsWzn9xAkNgTBNMXj7
+2026-05-11,Starbucks,Starbucks,4.33,USD,0,in store,"[""Food and Drink"", ""Restaurants"", ""Coffee Shop""]",FOOD_AND_DRINK,FOOD_AND_DRINK_COFFEE,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,BPKl7lk3WeSLX93g48L3FaE3xdonZMFJVj1dA
+2026-05-11,McDonald's,McDonald's,12.0,USD,0,in store,"[""Food and Drink"", ""Restaurants"", ""Fast Food""]",FOOD_AND_DRINK,FOOD_AND_DRINK_FAST_FOOD,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,zKwM3MzD1ySMGB36XlM3IZjxdqMw3nt86mKR3
+2026-05-10,SparkFun,FUN,89.4,USD,0,in store,"[""Food and Drink"", ""Restaurants""]",GENERAL_MERCHANDISE,GENERAL_MERCHANDISE_GIFTS_AND_NOVELTIES,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,31XBmBJ9xltNp5vV8bNvCnVxBjDZNEfN5RLk8
+2026-05-09,INTRST PYMNT,,-4.22,USD,0,other,"[""Transfer"", ""Credit""]",TRANSFER_IN,TRANSFER_IN_OTHER_TRANSFER_IN,XPV1k1rjRXSb5ayom3bysAZk5RzLrZulyVV3W,PzZeGe7BAnSbj6qRnQbqsNpmeDLoQPumVvnGm
+,,,,,,,,,,XPV1k1rjRXSb5ayom3bysAZk5RzLrZulyVV3W,6lbmKmv94rTB7MNg81eef5o9P4gV6Au8l1wMW
+,,,,,,,,,,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,8KjwzwZ9PBSwg7xDlPvvHLg1BonaGlCWXZd4j
+,,,,,,,,,,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,ANkQjQKBW7SKGxoBaPyysnxjmpWM54f9p4GK5
+,,,,,,,,,,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,EeBNZN3kWMSkXBW6j4bbHR4GNzWX9Vf4BgDvk
+,,,,,,,,,,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,GZx313dN6LSKgnDAeWXXsBnedpA9ZVu6pGEr7
+,,,,,,,,,,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,GZx313dN6LSKgnDAeWeXTyD85a5wW8fRGdGlz
+,,,,,,,,,,XPV1k1rjRXSb5ayom3bysAZk5RzLrZulyVV3W,R3yVbVGxAmIQyngXrZBBhl8eDrR9vWuaqPdrv
+,,,,,,,,,,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,WNy8r8kPA6SkPZjpdMBBH9JoZqGRgDH6bPLAE
+,,,,,,,,,,XPV1k1rjRXSb5ayom3bysAZk5RzLrZulyVV3W,XPV1k1rjRXSb5ayom3jjuWVGzoZDyNCbX1BzQ
+,,,,,,,,,,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,bEz373ymodfGLdwq18llTbmjpw5EgDCmkoDyK
+,,,,,,,,,,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,g9aA1A7m6jSEWjXow8BBhxMrpXnwdECE6L3aQ
+,,,,,,,,,,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,myXLELA8w1UEe1PWbjNNhZwAePopB5fgo4qwy
+,,,,,,,,,,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,nEQpWpA89LfGMLnpbJPPTqzRwn6VMBcA53xp9
+,,,,,,,,,,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,oEmXAXywopfGxpQNbZjjTeqDEQ6KpJioZpLxz
+,,,,,,,,,,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,pwRLGLAWmoIElow5RLGGhM87WwVjd9fpvJRya
+,,,,,,,,,,XPV1k1rjRXSb5ayom3bysAZk5RzLrZulyVV3W,vXW5K5l8JGsE6GLW73mmhQyVmL7RqDiqKv54D
+,,,,,,,,,,6lbmKmv94rTB7MNg81BNtzgv31PkEgtAGNNyR,yqW3B3r8Rmu9JblKprGGTwBg1L7N5QI4aKNLR
